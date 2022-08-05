@@ -1,3 +1,28 @@
+// UTILS
+@import './utils/variables';
+@import './utils/placeholders';
+@import './utils/mixins';
+@import './utils/hidden';
+@import './utils/breakpoints';
+
+// BASE SETTINGS
+@import './base/fonts';
 @import './base/common';
 @import './base/reset';
-@import './example';
+
+// COMPONENTS
+@import './components/sections';
+@import './components/containers';
+@import './components/titles';
+@import './components/labels';
+@import './components/logo';
+
+// LAYOUTS
+@import './layout/header-hero-section';
+@import './layout/products-section';
+@import './layout/about-section';
+@import './layout/advantages-section';
+@import './layout/gallery-section';
+@import './layout/customer-reviews-section';
+@import './layout/contacts-section';
+@import './layout/footer-section';
