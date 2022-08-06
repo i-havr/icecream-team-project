@@ -1,1 +1,52 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color-primary);
+  background-color: var(--background-color-primary);
+  font-family: 'DM Sans', sans-serif;
+}
+
+// SETTINGS FOR MODAL WINDOW (OPTIONAL)
+body.modal-open {
+  overflow: hidden;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.title {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-color-titles);
+}
+
+.label {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--text-color-labels);
+}
