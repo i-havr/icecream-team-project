@@ -1,0 +1,184 @@
+.hero {
+
+    // Styles for mobile
+
+    // Висоту прибрати при злитті з хедером.
+    height: 502px;
+
+    padding: 194px 20px 158px;
+
+    background-color: var(--background-color-other);
+
+    background-image:
+        url("../images/hero/big-ice-cream-mobile.png"),
+        radial-gradient(circle at center, var(--decorative-color) 56.5%, transparent 56.5%);
+    
+    background-size: 171px, 346px;
+    background-repeat: no-repeat;
+    background-position: top 92px left 117px, top 2px left 35px;
+
+
+
+    &__title {
+        max-width: 218px;
+        margin-bottom: 20px;
+
+        font-size: 26px;
+        text-align: left;
+        color: var(--text-color-secondary);
+    }
+
+
+
+    &__title--red {
+        font-size: 48px;
+        line-height: .96;
+        color: var(--text-color-titles);
+    }
+
+
+
+    &__btns {
+        @include centeredFlex (inline-flex);
+    }
+
+
+
+    &__btn {
+        outline: 1px solid tomato;
+    }
+
+
+
+    &__btn:not(:last-child) {
+        margin-right: 8px;
+    }
+
+
+
+    &__outlet {
+        display: none;
+    }
+
+
+
+    &__descr {
+        display: none;
+    }
+
+
+
+    // Styles for tablets
+
+    @media screen and (min-width: 768px) {
+        // Висоту прибрати при злитті з хедером.
+        height: 416px;
+
+        padding: 32px;
+
+        background-image:
+            url("../images/hero/cup-of-milk-tablet.png"),
+            url("../images/hero/girl-tastes-ice-cream-tablet.png"),
+            url("../images/hero/big-ice-cream-tablet.png"),
+            radial-gradient(circle at center, var(--decorative-color) 62.5%, transparent 62.5%);
+
+        background-size: 152px, 190px, 143px, 335px;
+        background-position: top 246px left 32px, top 265px left 546px, top 80px left 322px, top 8px left 248px;
+    
+
+
+        &__wrapper {
+            @include centeredFlex (flex, space-between, center);
+        }
+
+
+
+        &__outlet {
+            display: inline-block;
+        }
+
+
+
+        &__outlet-item {
+            position: relative;
+            z-index: 1;
+
+            text-align: right;
+            font-size: 28px;
+            line-height: 1.14;
+        }
+
+
+
+        &__outlet-item:not(:last-child) {
+            margin-bottom: 27px;
+        }
+
+
+
+        &__outlet-item::before {
+            content: "";
+    
+            position: absolute;
+            top: -4px;
+            right: -6px;
+            z-index: -1;
+
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+
+            background-color: var(--text-color-secondary);
+        }
+        
+
+
+        &__outlet-deskr {
+            position: absolute;
+            bottom: -9px;
+            right: 0;
+
+            min-width: 46px;
+
+            font-family: 'DM Sans';
+            font-size: 8px;
+            line-height: 1.25;
+            letter-spacing: 0.04em;
+            text-transform: lowercase;
+            color: var(--text-color-secondary);
+        }
+        
+        
+
+        &__descr {
+            display: block;
+        }
+    }
+}
+
+// .circle {
+//    z-index: -1;
+//     display: inline-block;
+//     position: absolute;
+//     top: 83px;
+//     left: 36px;
+//     background-color: tomato;
+//     width: 346px;
+//     height: 344px;
+//     border-radius: 50%;
+// }
+
+
+// .test {
+//     z-index: 0;
+        
+//     overflow: hidden;
+    
+//     background-image: url("../images/hero/big-ice-cream-mobile.png");
+        
+//     background-size: 171px;
+//     background-repeat: no-repeat;
+//     background-position: top 92px left 117px;
+
+// }
+
