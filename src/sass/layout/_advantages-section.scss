@@ -1,6 +1,15 @@
 .advantages {
   padding-top: 40px;
   background-color: var(--background-color-secondary);
+
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 60px;
+  }
 }
 
 .advantages__list {
@@ -16,12 +25,25 @@
   max-width: 230px;
 
   @media screen and (min-width: 768px) {
-    max-width: 180px;
+    max-width: 162px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 288px;
   }
 }
 
 .advantages__item:not(:last-child) {
   margin-bottom: 32px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 22px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 115px;
+  }
 }
 
 .advantages__item:first-child::before {
@@ -43,6 +65,10 @@
   @media screen and (min-width: 768px) {
     margin-bottom: 36px;
   }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 40px;
+  }
 }
 
 .advantages__item:nth-child(2)::before {
@@ -63,7 +89,10 @@
 
   @media screen and (min-width: 768px) {
     margin-bottom: 36px;
-    max-width: 162px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 40px;
   }
 }
 
@@ -85,12 +114,10 @@
 
   @media screen and (min-width: 768px) {
     margin-bottom: 36px;
-    max-width: 159px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     margin-bottom: 40px;
-    max-width: 288px;
   }
 }
 
@@ -108,6 +135,13 @@
     margin-bottom: 13px;
     font-size: 48px;
     line-height: 1.15;
+    text-transform: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 16px;
+    font-size: 58px;
+    line-height: 1.14;
   }
 }
 
@@ -119,5 +153,11 @@
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 1.74;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: 0.02em;
   }
 }
