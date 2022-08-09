@@ -7,15 +7,14 @@
                 <use href="./images/svg-images/svg-sprite.svg#icon-logo"></use>
             </svg>
         </a>
-        
-        <button type="button">
-            <svg width="20" hight="12">
+        <button type="button" class="js-open-menu" aria-expanded="false" aria-controls="menu-container">
+            <svg width="20" hight="12" aria-label="Switch-on mobile menu">
                 <use href="./images/svg-images/svg-sprite.svg#icon-menu-burger"></use>
             </svg>
         </button>
-        <div class="menu-container">
-            <button type="buttn">
-                <svg width="" hight="">
+        <div class="menu-container js-menu-container" id="menu-container">
+            <button type="button" class="js-close-menu" aria-expanded="true" aria-controls="menu-container">
+                <svg width="14" hight="14" aria-label="Switch-off mobile menu">
                     <use href="./images/svg-images/svg-sprite.svg#icon-menu-close"></use>
                 </svg>
             </button>
