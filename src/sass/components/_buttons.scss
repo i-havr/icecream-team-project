@@ -1,4 +1,15 @@
-.button {
+
+.button-pink {
   border: none;
   border-radius: 22px;
+  background-color: var(--text-color-titles);
+  color: var(--text-color-secondary);
+  
+}
+
+.button-white {
+  border: none;
+  border-radius: 22px;
+  background-color: var(--text-color-secondary);
+  color: var(--text-color-titles);
 }
