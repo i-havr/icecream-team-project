@@ -5,7 +5,10 @@
     // Висоту прибрати при злитті з хедером.
     height: 502px;
 
-    padding: 194px 20px 158px;
+    position: relative;
+
+    padding-top: 194px;
+    padding-bottom: 158px;
 
     background-color: var(--background-color-other);
 
@@ -19,11 +22,26 @@
 
 
 
+    @media screen and (max-width: 767px) {
+        &__container {
+            margin-left: initial;
+            margin-right: initial;
+        }
+
+
+
+        &__wrapper {
+            max-width: 218px;
+        }
+    }
+
+
+
     &__title {
-        max-width: 218px;
         margin-bottom: 20px;
 
         font-size: 26px;
+        letter-spacing: 0.01em;
         text-align: left;
         color: var(--text-color-secondary);
     }
@@ -74,7 +92,8 @@
         // Висоту прибрати при злитті з хедером.
         height: 416px;
 
-        padding: 32px;
+        padding-top: 102px;
+        padding-bottom: 32px;
 
         background-image:
             url("../images/hero/cup-of-milk-tablet.png"),
@@ -83,18 +102,36 @@
             radial-gradient(circle at center, var(--decorative-color) 62.5%, transparent 62.5%);
 
         background-size: 152px, 190px, 143px, 335px;
-        background-position: top 246px left 32px, top 265px left 546px, top 80px left 322px, top 8px left 248px;
+        background-position: top 246px left 32px, bottom 1px right 32px, top 80px right 303px, top 8px right 185px;
     
 
 
         &__wrapper {
-            @include centeredFlex (flex, space-between, center);
+            @include centeredFlex (flex, space-between, baseline);
+        }
+
+
+
+        &__title {
+            max-width: 162px;
+
+            font-size: 22px;
+            line-height: 1.14;
+        }
+
+
+
+        &__title--red {
+            font-size: 34px;
+            line-height: .91;
         }
 
 
 
         &__outlet {
             display: inline-block;
+
+            margin-right: 6px;
         }
 
 
@@ -151,34 +188,119 @@
         
 
         &__descr {
+            position: absolute;
+            bottom: 81px;
+            left: 184px;
+
             display: block;
+
+            width: 114px;
+
+            font-size: 8px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--text-color-secondary);
+        }
+    }
+
+
+
+    // Styles for desktop
+
+    @media screen and (min-width: 1200px) {
+
+        // Висоту прибрати при злитті з хедером.
+        height: 664px;
+
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    
+        padding-top: 147px;
+        padding-bottom: 84px;
+    
+        background-image:
+            url("../images/hero/cup-of-milk-desktop.png"),
+            url("../images/hero/girl-tastes-ice-cream-desktop.png"),
+            url("../images/hero/big-ice-cream-desktop.png"),
+            radial-gradient(circle at center, var(--decorative-color) 62.5%, transparent 62.5%);
+    
+        background-size: 213px, 304px, 236px, 534px;
+        background-position: top 388px left 16px, bottom 1px right 16px, top 108px right 328px, top -10px right 149px;
+    
+
+
+        &__title {
+            max-width: 277px;
+            margin-bottom: 24px;
+    
+            font-size: 38px;
+            line-height: 1.16;
+        }
+        
+        
+        
+        &__title--red {
+            font-size: 58px;
+            line-height: .90;
+        }
+
+
+
+        &__outlet {
+            margin-right: 15px;
+        }
+
+
+
+        &__outlet-item {
+            font-size: 46px;
+            line-height: 1.15;
+        }
+
+
+
+        &__outlet-item:not(:last-child) {
+            margin-bottom: 38px;
+        }
+
+
+
+        &__outlet-item::before {
+            top: -5px;
+            right: -15px;
+
+            width: 30px;
+            height: 30px;
+        }
+
+
+
+        &__outlet-deskr {
+            position: absolute;
+            bottom: -9px;
+            right: 0;
+
+            min-width: 46px;
+
+            font-family: 'DM Sans';
+            font-size: 8px;
+            line-height: 1.25;
+            letter-spacing: 0.04em;
+            text-transform: lowercase;
+            color: var(--text-color-secondary);
+        }
+
+
+
+        &__descr {
+            bottom: 130px;
+            left: 229px;
+
+            width: 200px;
+
+            font-size: 14px;
+            line-height: 1.4;
         }
     }
 }
-
-// .circle {
-//    z-index: -1;
-//     display: inline-block;
-//     position: absolute;
-//     top: 83px;
-//     left: 36px;
-//     background-color: tomato;
-//     width: 346px;
-//     height: 344px;
-//     border-radius: 50%;
-// }
-
-
-// .test {
-//     z-index: 0;
-        
-//     overflow: hidden;
-    
-//     background-image: url("../images/hero/big-ice-cream-mobile.png");
-        
-//     background-size: 171px;
-//     background-repeat: no-repeat;
-//     background-position: top 92px left 117px;
-
-// }
-
