@@ -1,78 +1,324 @@
 <section class="gallery section">
-  <h2 class="gallery_title visually-hiden">
+  <h2 class="gallery__title visually-hiden">
     A gallery of funny ice cream images
   </h2>
-  <div class="gallery_container container">
-    <ul class="gallery_list list">
-      <li class="gallery_item">
-        <img
-          class="gallery_image"
-          src="./images/gallery/gallery-mobile/green-ice-cream-mobile.jpg"
-          alt="green-ice-cream"
-        />
+  <div class="gallery__container container">
+    <ul class="gallery__list list">
+      <li class="gallery__item gallery__column1">
+        <picture>
+          <source
+            srcset="
+              ./images/gallery/gallery-desktop/green-ice-cream-desktop.jpg     1x,
+              ./images/gallery/gallery-desktop/green-ice-cream-desktop-@2x.jpg 2x,
+              ./images/gallery/gallery-desktop/green-ice-cream-desktop-@3x.jpg 3x
+            "
+            media="(min-width: 1199px)"
+          />
+          <source
+            srcset="
+              ./images/gallery/gallery-tablet/green-ice-cream-tablet.jpg     1x,
+              ./images/gallery/gallery-tablet/green-ice-cream-tablet-@2x.jpg 2x,
+              ./images/gallery/gallery-tablet/green-ice-cream-tablet-@3x.jpg 3x
+            "
+            media="(min-width: 768px) and (max-width: 1199px)"
+          />
+          <img
+            class="gallery__image"
+            srcset="
+              ./images/gallery/gallery-mobile/green-ice-cream-mobile.jpg     1x,
+              ./images/gallery/gallery-mobile/green-ice-cream-mobile-@2x.jpg 2x,
+              ./images/gallery/gallery-mobile/green-ice-cream-mobile-@3x.jpg 3x
+            "
+            src="./images/gallery/gallery-mobile/green-ice-cream-mobile.jpg"
+            alt="green-ice-cream"
+          />
+        </picture>
       </li>
-      <li class="gallery_item">
-        <img
-          class="gallery_image"
-          src="./images/gallery/gallery-mobile/ice-cream-in-hand-mobile.jpg"
-          alt="ice-cream-in-hand"
-        />
+      <li class="gallery__item gallery__column2">
+        <ul class="list">
+          <li class="item">
+            <picture>
+              <source
+                srcset="
+                  ./images/gallery/gallery-desktop/ice-cream-in-hand-desktop.jpg     1x,
+                  ./images/gallery/gallery-desktop/ice-cream-in-hand-desktop-@2x.jpg 2x,
+                  ./images/gallery/gallery-desktop/ice-cream-in-hand-desktop-@3x.jpg 3x
+                "
+                media="(min-width: 1199px)"
+              />
+              <source
+                srcset="
+                  ./images/gallery/gallery-tablet/ice-cream-in-hand-tablet.jpg     1x,
+                  ./images/gallery/gallery-tablet/ice-cream-in-hand-tablet-@2x.jpg 2x,
+                  ./images/gallery/gallery-tablet/ice-cream-in-hand-tablet-@3x.jpg 3x
+                "
+                media="(min-width: 768px) and (max-width: 1199px)"
+              />
+              <img
+                class="gallery__image"
+                srcset="
+                  ./images/gallery/gallery-mobile/ice-cream-in-hand-mobile.jpg     1x,
+                  ./images/gallery/gallery-mobile/ice-cream-in-hand-mobile-@2x.jpg 2x,
+                  ./images/gallery/gallery-mobile/ice-cream-in-hand-mobile-@3x.jpg 3x
+                "
+                src="./images/gallery/gallery-mobile/ice-cream-in-hand-mobile.jpg"
+                alt="ice-cream-in-hand"
+              />
+            </picture>
+          </li>
+          <li class="item">
+            <picture>
+              <source
+                srcset="
+                  ./images/gallery/gallery-desktop/red-ice-cream-desktop.jpg     1x,
+                  ./images/gallery/gallery-desktop/red-ice-cream-desktop-@2x.jpg 2x,
+                  ./images/gallery/gallery-desktop/red-ice-cream-desktop-@3x.jpg 3x
+                "
+                media="(min-width: 1199px)"
+              />
+              <source
+                srcset="
+                  ./images/gallery/gallery-tablet/red-ice-cream-tablet.jpg     1x,
+                  ./images/gallery/gallery-tablet/red-ice-cream-tablet-@2x.jpg 2x,
+                  ./images/gallery/gallery-tablet/red-ice-cream-tablet-@3x.jpg 3x
+                "
+                media="(min-width: 768px) and (max-width: 1199px)"
+              />
+              <img
+                class="gallery__image"
+                srcset="
+                  ./images/gallery/gallery-mobile/red-ice-cream-mobile.jpg     1x,
+                  ./images/gallery/gallery-mobile/red-ice-cream-mobile-@2x.jpg 2x,
+                  ./images/gallery/gallery-mobile/red-ice-cream-mobile-@3x.jpg 3x
+                "
+                src="./images/gallery/gallery-mobile/red-ice-cream-mobile.jpg"
+                alt="red-ice-cream"
+              />
+            </picture>
+          </li>
+        </ul>
       </li>
-      <li class="gallery_item">
-        <img
-          class="gallery_image"
-          src="./images/gallery/gallery-mobile/red-ice-cream-mobile.jpg"
-          alt="red-ice-cream"
-        />
+      <li class="gallery__item gallery__column3">
+        <ul class="list">
+          <li class="item">
+            <picture>
+              <source
+                srcset="
+                  ./images/gallery/gallery-desktop/lot-of-ice-cream-desktop.jpg     1x,
+                  ./images/gallery/gallery-desktop/lot-of-ice-cream-desktop-@2x.jpg 2x,
+                  ./images/gallery/gallery-desktop/lot-of-ice-cream-desktop-@3x.jpg 3x
+                "
+                media="(min-width: 1199px)"
+              />
+              <source
+                srcset="
+                  ./images/gallery/gallery-tablet/lot-of-ice-cream-tablet.jpg     1x,
+                  ./images/gallery/gallery-tablet/lot-of-ice-cream-tablet-@2x.jpg 2x,
+                  ./images/gallery/gallery-tablet/lot-of-ice-cream-tablet-@3x.jpg 3x
+                "
+                media="(min-width: 768px) and (max-width: 1199px)"
+              />
+              <img
+                class="gallery__image"
+                srcset="
+                  ./images/gallery/gallery-mobile/lot-of-ice-cream-mobile.jpg     1x,
+                  ./images/gallery/gallery-mobile/lot-of-ice-cream-mobile-@2x.jpg 2x,
+                  ./images/gallery/gallery-mobile/lot-of-ice-cream-mobile-@3x.jpg 3x
+                "
+                src="./images/gallery/gallery-mobile/lot-of-ice-cream-mobile.jpg"
+                alt="lot-of-ice-cream"
+              />
+            </picture>
+          </li>
+          <li class="item">
+            <picture>
+              <source
+                srcset="
+                  ./images/gallery/gallery-desktop/girl-and-ice-cream-desktop.jpg     1x,
+                  ./images/gallery/gallery-desktop/girl-and-ice-cream-desktop-@2x.jpg 2x,
+                  ./images/gallery/gallery-desktop/girl-and-ice-cream-desktop-@3x.jpg 3x
+                "
+                media="(min-width: 1199px)"
+              />
+              <source
+                srcset="
+                  ./images/gallery/gallery-tablet/girl-and-ice-cream-tablet.jpg     1x,
+                  ./images/gallery/gallery-tablet/girl-and-ice-cream-tablet-@2x.jpg 2x,
+                  ./images/gallery/gallery-tablet/girl-and-ice-cream-tablet-@3x.jpg 3x
+                "
+                media="(min-width: 768px) and (max-width: 1199px)"
+              />
+              <img
+                class="gallery__image"
+                srcset="
+                  ./images/gallery/gallery-mobile/girl-and-ice-cream-mobile.jpg     1x,
+                  ./images/gallery/gallery-mobile/girl-and-ice-cream-mobile-@2x.jpg 2x,
+                  ./images/gallery/gallery-mobile/girl-and-ice-cream-mobile-@3x.jpg 3x
+                "
+                src="./images/gallery/gallery-mobile/girl-and-ice-cream-mobile.jpg"
+                alt="girl-and-ice-cream"
+              />
+            </picture>
+          </li>
+        </ul>
       </li>
-      <li class="gallery_item">
-        <img
-          class="gallery_image"
-          src="./images/gallery/gallery-mobile/lot-of-ice-cream-mobile.jpg"
-          alt="lot-of-ice-cream"
-        />
+      <li class="gallery__item gallery__column4">
+        <ul class="list">
+          <li class="item">
+            <picture>
+              <source
+                srcset="
+                  ./images/gallery/gallery-desktop/decorating-ice-cream-desktop.jpg     1x,
+                  ./images/gallery/gallery-desktop/decorating-ice-cream-desktop-@2x.jpg 2x,
+                  ./images/gallery/gallery-desktop/decorating-ice-cream-desktop-@3x.jpg 3x
+                "
+                media="(min-width: 1199px)"
+              />
+              <source
+                srcset="
+                  ./images/gallery/gallery-tablet/decorating-ice-cream-tablet.jpg     1x,
+                  ./images/gallery/gallery-tablet/decorating-ice-cream-tablet-@2x.jpg 2x,
+                  ./images/gallery/gallery-tablet/decorating-ice-cream-tablet-@3x.jpg 3x
+                "
+                media="(min-width: 768px) and (max-width: 1199px)"
+              />
+              <img
+                class="gallery__image"
+                srcset="
+                  ./images/gallery/gallery-mobile/decorating-ice-cream-mobile.jpg     1x,
+                  ./images/gallery/gallery-mobile/decorating-ice-cream-mobile-@2x.jpg 2x,
+                  ./images/gallery/gallery-mobile/decorating-ice-cream-mobile-@3x.jpg 3x
+                "
+                src="./images/gallery/gallery-mobile/decorating-ice-cream-mobile.jpg"
+                alt="decorating-ice-cream"
+              />
+            </picture>
+          </li>
+          <li class="item">
+            <picture>
+              <source
+                srcset="
+                  ./images/gallery/gallery-desktop/ice-cream-in-hand-outdoors-desktop.jpg     1x,
+                  ./images/gallery/gallery-desktop/ice-cream-in-hand-outdoors-desktop-@2x.jpg 2x,
+                  ./images/gallery/gallery-desktop/ice-cream-in-hand-outdoors-desktop-@3x.jpg 3x
+                "
+                media="(min-width: 1199px)"
+              />
+              <source
+                srcset="
+                  ./images/gallery/gallery-tablet/ice-cream-in-hand-outdoors-tablet.jpg     1x,
+                  ./images/gallery/gallery-tablet/ice-cream-in-hand-outdoors-tablet-@2x.jpg 2x,
+                  ./images/gallery/gallery-tablet/ice-cream-in-hand-outdoors-tablet-@3x.jpg 3x
+                "
+                media="(min-width: 768px) and (max-width: 1199px)"
+              />
+              <img
+                class="gallery__image"
+                srcset="
+                  ./images/gallery/gallery-mobile/ice-cream-in-hand-outdoors-mobile.jpg     1x,
+                  ./images/gallery/gallery-mobile/ice-cream-in-hand-outdoors-mobile-@2x.jpg 2x,
+                  ./images/gallery/gallery-mobile/ice-cream-in-hand-outdoors-mobile-@3x.jpg 3x
+                "
+                src="./images/gallery/gallery-mobile/ice-cream-in-hand-outdoors-mobile.jpg"
+                alt="ice-cream-in-hand-outdoors"
+              />
+            </picture>
+          </li>
+        </ul>
       </li>
-      <li class="gallery_item">
-        <img
-          class="gallery_image"
-          src="./images/gallery/gallery-mobile/girl-and-ice-cream-mobile.jpg"
-          alt="girl-and-ice-cream"
-        />
+      <li class="gallery__item gallery__column5">
+        <ul class="list">
+          <li class="item">
+            <picture>
+              <source
+                srcset="
+                  ./images/gallery/gallery-desktop/ice-cream-licks-dog-desktop.jpg     1x,
+                  ./images/gallery/gallery-desktop/ice-cream-licks-dog-desktop-@2x.jpg 2x,
+                  ./images/gallery/gallery-desktop/ice-cream-licks-dog-desktop-@3x.jpg 3x
+                "
+                media="(min-width: 1199px)"
+              />
+              <source
+                srcset="
+                  ./images/gallery/gallery-tablet/ice-cream-licks-dog-tablet.jpg     1x,
+                  ./images/gallery/gallery-tablet/ice-cream-licks-dog-tablet-@2x.jpg 2x,
+                  ./images/gallery/gallery-tablet/ice-cream-licks-dog-tablet-@3x.jpg 3x
+                "
+                media="(min-width: 768px) and (max-width: 1199px)"
+              />
+              <img
+                class="gallery__image"
+                srcset="
+                  ./images/gallery/gallery-mobile/ice-cream-licks-dog-mobile.jpg     1x,
+                  ./images/gallery/gallery-mobile/ice-cream-licks-dog-mobile-@2x.jpg 2x,
+                  ./images/gallery/gallery-mobile/ice-cream-licks-dog-mobile-@3x.jpg 3x
+                "
+                src="./images/gallery/gallery-mobile/ice-cream-licks-dog-mobile.jpg"
+                alt="ice-cream-licks-dog"
+              />
+            </picture>
+          </li>
+          <li class="item">
+            <picture>
+              <source
+                srcset="
+                  ./images/gallery/gallery-desktop/coffee-in-hand-desktop.jpg     1x,
+                  ./images/gallery/gallery-desktop/coffee-in-hand-desktop-@2x.jpg 2x,
+                  ./images/gallery/gallery-desktop/coffee-in-hand-desktop-@3x.jpg 3x
+                "
+                media="(min-width: 1199px)"
+              />
+              <source
+                srcset="
+                  ./images/gallery/gallery-tablet/coffee-in-hand-tablet.jpg     1x,
+                  ./images/gallery/gallery-tablet/coffee-in-hand-tablet-@2x.jpg 2x,
+                  ./images/gallery/gallery-tablet/coffee-in-hand-tablet-@3x.jpg 3x
+                "
+                media="(min-width: 768px) and (max-width: 1199px)"
+              />
+              <img
+                class="gallery__image"
+                srcset="
+                  ./images/gallery/gallery-mobile/coffee-in-hand-mobile.jpg     1x,
+                  ./images/gallery/gallery-mobile/coffee-in-hand-mobile-@2x.jpg 2x,
+                  ./images/gallery/gallery-mobile/coffee-in-hand-mobile-@3x.jpg 3x
+                "
+                src="./images/gallery/gallery-mobile/coffee-in-hand-mobile.jpg"
+                alt="coffee-in-hand"
+              />
+            </picture>
+          </li>
+        </ul>
       </li>
-      <li class="gallery_item">
-        <img
-          class="gallery_image"
-          src="./images/gallery/gallery-mobile/decorating-ice-cream-mobile.jpg"
-          alt="decorating-ice-cream"
-        />
-      </li>
-      <li class="gallery_item">
-        <img
-          class="gallery_image"
-          src="./images/gallery/gallery-mobile/ice-cream-in-hand-outdoors-mobile.jpg"
-          alt="ice-cream-in-hand-outdoors"
-        />
-      </li>
-      <li class="gallery_item">
-        <img
-          class="gallery_image"
-          src="./images/gallery/gallery-mobile/ice-cream-licks-dog-mobile.jpg"
-          alt="ice-cream-licks-dog"
-        />
-      </li>
-      <li class="gallery_item">
-        <img
-          class="gallery_image"
-          src="./images/gallery/gallery-mobile/coffee-in-hand-mobile.jpg"
-          alt="coffee-in-hand"
-        />
-      </li>
-      <li class="gallery_item">
-        <img
-          class="gallery_image"
-          src="./images/gallery/gallery-mobile/cake-on-cup-mobile.jpg"
-          alt="cake-on-cup"
-        />
+      <li class="gallery__item gallery__column6">
+        <picture>
+          <source
+            srcset="
+              ./images/gallery/gallery-desktop/cake-on-cup-desktop.jpg     1x,
+              ./images/gallery/gallery-desktop/cake-on-cup-desktop-@2x.jpg 2x,
+              ./images/gallery/gallery-desktop/cake-on-cup-desktop-@3x.jpg 3x
+            "
+            media="(min-width: 1199px)"
+          />
+          <source
+            srcset="
+              ./images/gallery/gallery-tablet/cake-on-cup-tablet.jpg     1x,
+              ./images/gallery/gallery-tablet/cake-on-cup-tablet-@2x.jpg 2x,
+              ./images/gallery/gallery-tablet/cake-on-cup-tablet-@3x.jpg 3x
+            "
+            media="(min-width: 768px) and (max-width: 1199px)"
+          />
+          <img
+            class="gallery__image"
+            srcset="
+              ./images/gallery/gallery-mobile/cake-on-cup-mobile.jpg     1x,
+              ./images/gallery/gallery-mobile/cake-on-cup-mobile-@2x.jpg 2x,
+              ./images/gallery/gallery-mobile/cake-on-cup-mobile-@3x.jpg 3x
+            "
+            src="./images/gallery/gallery-mobile/cake-on-cup-mobile.jpg"
+            alt="cake-on-cup"
+          />
+        </picture>
       </li>
     </ul>
   </div>
