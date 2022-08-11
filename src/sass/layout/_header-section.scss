@@ -1,3 +1,7 @@
+.page-header {
+    @include centeredFlex ($content: space-between);
+}
+
 .mobile-menu-button {
     @include centeredFlex (inline-flex);
     width: 20px;
@@ -5,35 +9,99 @@
     padding: 0;
     border: none;
 
+    background-color: transparent;
+    cursor: pointer;
+
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
     &__icon-open {
-        width: 20px;
-        height: 12px;
-        fill: black;
+        width: 30px;
+        height: 18px;
     }
 
     &__icon-close {
-        width: 14px;
-        height: 14px;
-        fill: black;
+        width: 21px;
+        height: 21px;
     }
 }
 
-.mobile-menu-button.js-open-menu .menu-container.js-menu-container {
-    display: none;
+.header__button {
+    @include centeredFlex ();
+    border: none;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 19px;
+    width: 210px;
+    height: 44px;
+    text-align: center;
+    border-radius: 22px;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+    color: var(--text-color-titles);
+    background-color: var(--background-color-primary);
 }
 
-// .button-menu .icon-close-menu {
-//     display: none;
-// }
-
-.mobile-menu-button.js-close-menu .menu-container.js-menu-container {
-    display: block;
+.button__img {
+    width: 10.52px;
+    height: 16px;
+    margin-left: 30px;
 }
 
-// .button-menu.is-open .icon-close-menu {
-//     display: block;
-// }
+.menu-container {
+    @media screen and (max-width: 767px) {
+        display: none;
 
-// .button-menu.is-open .icon-open-menu {
-//     display: none;
-// }
+        &.is-open {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+    
+            overflow-y: scroll;
+    
+            display: flex;
+            flex-direction: column;
+
+            background-color: var(--background-mobile-menu);
+            padding: 60px 20px;
+        }
+    }
+}
+
+.site-navigation {
+    &__item {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        border-bottom: 1px solid #E5E5E5;
+    }
+
+    &__item:first-child {
+        border-top: 1px solid #E5E5E5;
+    }
+
+    &__link {
+        display: inline-block;
+        font-weight: 700;
+        line-height: 1.29;
+        
+        color: var(--text-color-secondary);
+
+        transition-property: color;
+        // transition-timing-function: var(--timing-function);
+        // transition-duration: var(--duration);
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: var(--text-color-titles);
+    }
+}
