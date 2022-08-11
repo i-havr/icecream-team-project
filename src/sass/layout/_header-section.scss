@@ -1,11 +1,15 @@
+.header {
+    // position: relative;
+}
+
 .page-header {
     @include centeredFlex ($content: space-between);
 }
 
 .mobile-menu-button {
     @include centeredFlex (inline-flex);
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     padding: 0;
     border: none;
 
@@ -31,7 +35,6 @@
 
 .header__button {
     @include centeredFlex ();
-    border: none;
     padding: 0;
     margin-left: auto;
     margin-right: auto;
@@ -39,53 +42,60 @@
     width: 210px;
     height: 44px;
     text-align: center;
-    border-radius: 22px;
 
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.31;
-    color: var(--text-color-titles);
-    background-color: var(--background-color-primary);
 }
 
 .button__img {
     width: 10.52px;
     height: 16px;
     margin-left: 30px;
+    fill: currentColor;
 }
 
 .menu-container {
     @media screen and (max-width: 767px) {
-        display: none;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 250px;
+        background-color: tomato;
+        transform: translateX(100%);
 
         &.is-open {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
+            z-index: 5;
             height: 100vh;
-    
-            overflow-y: scroll;
-    
             display: flex;
             flex-direction: column;
+    
+            overflow-y: scroll;
 
             background-color: var(--background-mobile-menu);
             padding: 60px 20px;
+
+            transform: translateX(0);
+
+            transition: transform 250ms var(--timing-function);
         }
     }
+
+    // @media screen and (min-width: 768px) {
+    //     flex-direction: row;
+    // }
 }
 
 .site-navigation {
     &__item {
         padding-top: 13px;
         padding-bottom: 13px;
-        border-bottom: 1px solid #E5E5E5;
+        border-bottom: 1px solid var(--streak-color-mobile-menu);
     }
 
     &__item:first-child {
-        border-top: 1px solid #E5E5E5;
+        border-top: 1px solid var(--streak-color-mobile-menu);
     }
 
     &__link {
