@@ -2,7 +2,6 @@
 <header class="header">
     <div class="container page-header">
         <a href="./index.html" class="logo">
-            <!-- <img src="./images/svg-images/logo.svg" alt="Logo"> -->
             <svg class="logo__img" aria-hidden="true">
                 <use href="../src/images/svg-images/svg-sprite.svg#icon-logo"></use>
             </svg>
@@ -13,35 +12,38 @@
             </svg>
         </button>
         <div class="menu-container js-menu-container" id="menu-container">
-            <button class="mobile-menu-button mobile-menu-button__close js-close-menu" type="button" aria-expanded="true" aria-controls="menu-container">
-                <svg class="mobile-menu-button__icon-close" aria-label="Switch-off mobile menu">
-                    <use href="../src/images/svg-images/svg-sprite.svg#icon-menu-close"></use>
-                </svg>
-            </button>
-            <button class="header__button button-white" type="button">Buy now
-                <svg class="button__img" aria-hidden="true">
-                    <use href="../src/images/svg-images/svg-sprite.svg#icon-arrow-button"></use>
-                </svg>
-            </button>
-            <nav class="site-navigation">
-                <ul class="site-navigation__list list">
-                    <li class="site-navigation__item">
-                        <a href="#hero" class="site-navigation__link link">Home</a>
-                    </li>
-                    <li class="site-navigation__item">
-                        <a href="#contacts" class="site-navigation__link link">About us</a>
-                    </li>
-                    <li class="site-navigation__item">
-                        <a href="#about" class="site-navigation__link link">How it's made?</a>
-                    </li>
-                    <li class="site-navigation__item">
-                        <a href="#products" class="site-navigation__link link">Our products</a>
-                    </li>
-                    <li class="site-navigation__item">
-                        <a href="#footer" class="site-navigation__link link">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="menu-content">
+                <button class="mobile-menu-button mobile-menu-button__close js-close-menu" type="button" aria-expanded="true"
+                    aria-controls="menu-container">
+                    <svg class="mobile-menu-button__icon-close" aria-label="Switch-off mobile menu">
+                        <use href="../src/images/svg-images/svg-sprite.svg#icon-menu-close"></use>
+                    </svg>
+                </button>
+                <button class="header__button button-white" type="button">Buy now
+                    <svg class="button__img" aria-hidden="true">
+                        <use href="../src/images/svg-images/svg-sprite.svg#icon-arrow-button"></use>
+                    </svg>
+                </button>
+                <nav class="site-navigation">
+                    <ul class="site-navigation__list list">
+                        <li class="site-navigation__item">
+                            <a href="#hero" class="site-navigation__link link">Home</a>
+                        </li>
+                        <li class="site-navigation__item">
+                            <a href="#contacts" class="site-navigation__link link">About us</a>
+                        </li>
+                        <li class="site-navigation__item">
+                            <a href="#about" class="site-navigation__link link">How it's made?</a>
+                        </li>
+                        <li class="site-navigation__item">
+                            <a href="#products" class="site-navigation__link link">Our products</a>
+                        </li>
+                        <li class="site-navigation__item">
+                            <a href="#footer" class="site-navigation__link link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
 </header>
