@@ -1,4 +1,33 @@
 .gallery {
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--background-color-secondary) 20%,
+    var(--text-color-secondary) 20%,
+    var(--text-color-secondary) 80%
+  );
+
+  @media (min-width: 768px) {
+    background-image: linear-gradient(
+      to bottom,
+      var(--background-color-secondary) 65%,
+      var(--text-color-secondary) 65%,
+      var(--text-color-secondary) 40%
+    );
+  }
+
+  @media (min-width: 1200px) {
+    background-image: linear-gradient(
+      to bottom,
+      var(--background-color-secondary) 27%,
+      var(--text-color-secondary) 27%,
+      var(--text-color-secondary) 73%
+    );
+  }
+
   &__title {
     text-align: center;
     padding-bottom: 50px;
@@ -12,7 +41,6 @@
 
   &__list {
     display: flex;
-    align-items: center;
   }
 
   &__item {
@@ -52,10 +80,40 @@
   }
   &__column1 {
     padding-left: 0;
+    padding-top: 46px;
+
+    @media (min-width: 768px) {
+      padding-top: 142px;
+    }
+  }
+
+  &__column2 {
+    padding-top: 26px;
+    @media (min-width: 768px) {
+      padding-top: 88px;
+    }
+  }
+
+  &__column4 {
+    padding-top: 32px;
+    @media (min-width: 768px) {
+      padding-top: 98px;
+    }
+  }
+
+  &__column5 {
+    padding-top: 22px;
+    @media (min-width: 768px) {
+      padding-top: 65px;
+    }
   }
 
   &__column6 {
+    padding-top: 50px;
     padding-right: 0;
+    @media (min-width: 768px) {
+      padding-top: 155px;
+    }
   }
 
   &__column2 li:not(:last-child) {
