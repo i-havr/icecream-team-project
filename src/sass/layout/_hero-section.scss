@@ -2,10 +2,9 @@
 
 // Styles for mobile
 
-    // Висоту прибрати при злитті з хедером.
-    height: 502px;
-
     position: relative;
+
+    height: 502px;
 
     background-color: var(--background-color-other);
 
@@ -68,9 +67,9 @@
     &__title {
         margin-bottom: 20px;
 
+        text-align: left;
         font-size: 26px;
         letter-spacing: 0.04em;
-        text-align: left;
         color: var(--text-color-secondary);
     }
 
@@ -122,7 +121,7 @@
     // Styles for tablets
 
     @media screen and (min-width: 768px) {
-        // Висоту прибрати при злитті з хедером.
+
         height: 416px;
 
 
@@ -227,6 +226,7 @@
 
             width: 16px;
             height: 16px;
+
             border-radius: 50%;
 
             background-color: var(--text-color-secondary);
@@ -271,6 +271,7 @@
         }
 
 
+        // Кнопка під описом
         &__descr::after {
             content: "";
 
@@ -281,12 +282,13 @@
             width: 18px;
             height: 18px;
 
+            border-radius: 50%;
+
             background-color: var(--background-color-primary);
             background-image: url(../images/svg-images/arrow-right.svg);
             background-size: 7px;
             background-repeat: no-repeat;
             background-position: 50% 50%;
-            border-radius: 50%;
 
             pointer-events: auto;
             cursor: pointer;
@@ -317,12 +319,13 @@
         }
 
 
+
         // При ховері на кнопкпу показується новий опис
         &__descr:hover &__descr-expanded,
         &__descr:focus &__descr-expanded {
             
             display: inline-block;
-            width: 200px;
+            width: 150px;
 
             position: absolute;
             bottom: 0;
@@ -330,7 +333,7 @@
 
             padding: 5px;
 
-            // Блок вказівник зі стилями для десктопа)
+            // Блок вказівник
             color: var(--text-color-primary);
             background: var(--decorative-color);
             border: 4px solid transparent;
@@ -352,18 +355,20 @@
                 pointer-events: none;
             }
 
+
             &:before {
                 border-color: transparent;
                 border-top-color: rgba(0, 0, 0, 0.3);
                 border-width: 12px;
-                margin-left: -100px;
+                margin-left: -75px;
             }
+
 
             &:after {
                 border-color: transparent;
                 border-top-color: var(--decorative-color);
                 border-width: 9px;
-                margin-left: -97px;
+                margin-left: -72px;
             }
         }
     }
@@ -374,12 +379,7 @@
 
     @media screen and (min-width: 1200px) {
 
-        // Висоту прибрати при злитті з хедером.
         height: 664px;
-
-        // max-width: 1200px;
-        // margin-left: auto;
-        // margin-right: auto;
 
         &__overlay {
             max-width: 1200px;
@@ -498,9 +498,6 @@
 
 
         &__descr {
-            // bottom: 130px; було
-            // left: 229px; було
-
             width: 200px;
             height: 78px;
 
@@ -511,7 +508,7 @@
         }
 
 
-
+        // Кнопка під описом
         &__descr::after {
             bottom: -36px;
 
@@ -525,11 +522,21 @@
 
         &__descr:hover &__descr-expanded,
         &__descr:focus &__descr-expanded {
+            
+            width: 300px;
 
-
+            // Блок вказівник
             &::after,
             &::before {
-                top: 102%;
+                top: 103%;
+            }
+
+            &:before {
+                margin-left: -147px;
+            }
+
+            &::after {
+                margin-left: -144px;
             }
         }
     }
