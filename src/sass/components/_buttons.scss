@@ -1,0 +1,25 @@
+.button-pink {
+    border: none;
+    border-radius: 22px;
+    background-color: var(--text-color-titles);
+    color: var(--text-color-secondary);
+    transition: background-color 250ms var(--timing-function);
+  
+    &:hover,
+    &:focus {
+      background-color: #c7133e;
+    }  
+  }
+  
+  .button-white {
+    border: none;
+    border-radius: 22px;
+    background-color: var(--text-color-secondary);
+    color: var(--text-color-titles);
+    transition: background-color 250ms var(--timing-function);
+  
+    &:hover,
+    &:focus {
+      background-color:#ecebeb;
+    }
+  }
