@@ -1,24 +1,46 @@
 .hero {
 
-    // Styles for mobile
+// Styles for mobile
 
     // Висоту прибрати при злитті з хедером.
     height: 502px;
 
     position: relative;
 
-    padding-top: 194px;
-    padding-bottom: 158px;
-
     background-color: var(--background-color-other);
 
-    background-image:
-        url("../images/hero/big-ice-cream-mobile.png"),
-        radial-gradient(circle at center, var(--decorative-color) 56.5%, transparent 56.5%);
+
+    &__overlay {
+        height: 100%;
+        max-width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 194px;
+        padding-bottom: 158px;
+
+        background-image:
+            url("../images/hero/big-ice-cream-mobile.png"),
+            radial-gradient(circle at center,
+                            var(--decorative-color) 56.5%,
+                            transparent 56.5%);
     
-    background-size: 171px, 346px;
-    background-repeat: no-repeat;
-    background-position: top 92px left 117px, top 2px left 35px;
+        background-size: 171px, 346px;
+        background-repeat: no-repeat;
+        background-position: top 92px left 117px,
+                            top 2px left 35px;
+
+
+
+        @media screen and (min-device-pixel-ratio: 2),
+                screen and (min-resolution: 192dpi),
+                screen and (min-resolution: 2dppx) {
+            background-image:
+                url("../images/hero/big-ice-cream-mobile-@2x.png"),
+                radial-gradient(circle at center,
+                                var(--decorative-color) 56.5%,
+                                transparent 56.5%);
+        }
+    }
 
 
 
@@ -33,6 +55,12 @@
         &__wrapper {
             max-width: 218px;
         }
+    }
+
+
+
+    &__container {
+        text-align: right;
     }
 
 
@@ -57,7 +85,7 @@
 
 
     &__btns {
-        @include centeredFlex (inline-flex);
+        @include centeredFlex (flex, left, center);
     }
 
 
@@ -82,6 +110,8 @@
 
     &__descr {
         display: none;
+
+        text-align: left;
     }
 
 
@@ -92,18 +122,42 @@
         // Висоту прибрати при злитті з хедером.
         height: 416px;
 
-        padding-top: 102px;
-        padding-bottom: 32px;
 
-        background-image:
-            url("../images/hero/cup-of-milk-tablet.png"),
-            url("../images/hero/girl-tastes-ice-cream-tablet.png"),
-            url("../images/hero/big-ice-cream-tablet.png"),
-            radial-gradient(circle at center, var(--decorative-color) 62.5%, transparent 62.5%);
 
-        background-size: 152px, 190px, 143px, 335px;
-        background-position: top 246px left 32px, bottom 1px right 32px, top 80px right 303px, top 8px right 185px;
-    
+        &__overlay {
+            max-width: 768px;
+            padding-top: 102px;
+            padding-bottom: 32px;
+
+            background-image:
+                url("../images/hero/cup-of-milk-tablet.png"),
+                url("../images/hero/girl-tastes-ice-cream-tablet.png"),
+                url("../images/hero/big-ice-cream-tablet.png"),
+                radial-gradient(circle at center,
+                                var(--decorative-color) 62.5%,
+                                transparent 62.5%);
+
+            background-size: 152px, 190px, 143px, 335px;
+            background-position: top 246px left 32px,
+                                bottom 1px right 32px,
+                                top 80px right 303px,
+                                top 8px right 185px;
+        
+        
+        
+            @media screen and (min-device-pixel-ratio: 2),
+                    screen and (min-resolution: 192dpi),
+                    screen and (min-resolution: 2dppx) {
+                background-image:
+                    url("../images/hero/cup-of-milk-tablet-@2x.png"),
+                    url("../images/hero/girl-tastes-ice-cream-tablet-@2x.png"),
+                    url("../images/hero/big-ice-cream-tablet-@2x.png"),
+                    radial-gradient(circle at center,
+                                    var(--decorative-color) 62.5%,
+                                    transparent 62.5%);
+            }
+        }
+
 
 
         &__wrapper {
@@ -124,6 +178,12 @@
         &__title--red {
             font-size: 34px;
             line-height: .91;
+        }
+
+
+
+        &__btns {
+            margin-bottom: 61px;
         }
 
 
@@ -188,11 +248,13 @@
         
 
         &__descr {
-            position: absolute;
-            bottom: 81px;
-            left: 184px;
+            // position: absolute;
+            // bottom: 81px;
+            // left: 184px;
 
-            display: block;
+            display: inline-block;
+
+            margin-right: 438px;
 
             width: 114px;
 
@@ -212,22 +274,50 @@
         // Висоту прибрати при злитті з хедером.
         height: 664px;
 
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-    
-        padding-top: 147px;
-        padding-bottom: 84px;
-    
-        background-image:
-            url("../images/hero/cup-of-milk-desktop.png"),
-            url("../images/hero/girl-tastes-ice-cream-desktop.png"),
-            url("../images/hero/big-ice-cream-desktop.png"),
-            radial-gradient(circle at center, var(--decorative-color) 62.5%, transparent 62.5%);
-    
-        background-size: 213px, 304px, 236px, 534px;
-        background-position: top 388px left 16px, bottom 1px right 16px, top 108px right 328px, top -10px right 149px;
-    
+        // max-width: 1200px;
+        // margin-left: auto;
+        // margin-right: auto;
+
+        &__overlay {
+            max-width: 1200px;
+            padding-top: 147px;
+            padding-bottom: 84px;
+        
+            background-image:
+                url("../images/hero/cup-of-milk-desktop.png"),
+                url("../images/hero/girl-tastes-ice-cream-desktop.png"),
+                url("../images/hero/big-ice-cream-desktop.png"),
+                radial-gradient(circle at center,
+                                var(--decorative-color) 62.5%,
+                                transparent 62.5%);
+        
+            background-size: 213px, 304px, 236px, 534px;
+            background-position: top 388px left 16px,
+                                bottom 1px right 16px,
+                                top 108px right 328px,
+                                top -10px right 149px;
+
+
+
+            @media screen and (min-device-pixel-ratio: 2),
+                    screen and (min-resolution: 192dpi),
+                    screen and (min-resolution: 2dppx) {
+                background-image:
+                    url("../images/hero/cup-of-milk-desktop-@2x.png"),
+                    url("../images/hero/girl-tastes-ice-cream-desktop-@2x.png"),
+                    url("../images/hero/big-ice-cream-desktop-@2x.png"),
+                    radial-gradient(circle at center,
+                                    var(--decorative-color) 62.5%,
+                                    transparent 62.5%);
+            }
+        }
+
+
+
+        &__wrapper {
+            align-items: center;
+        }
+
 
 
         &__title {
@@ -243,6 +333,12 @@
         &__title--red {
             font-size: 58px;
             line-height: .90;
+        }
+
+
+
+        &__btns {
+            margin-bottom: 108px;
         }
 
 
@@ -278,26 +374,25 @@
 
         &__outlet-deskr {
             position: absolute;
-            bottom: -9px;
+            bottom: -18px;
             right: 0;
 
-            min-width: 46px;
+            min-width: 80px;
 
-            font-family: 'DM Sans';
-            font-size: 8px;
-            line-height: 1.25;
-            letter-spacing: 0.04em;
-            text-transform: lowercase;
-            color: var(--text-color-secondary);
+            font-size: 14px;
+            line-height: 1.29;
+            letter-spacing: 0.01em;
         }
 
 
 
         &__descr {
-            bottom: 130px;
-            left: 229px;
+            // bottom: 130px;
+            // left: 229px;
 
             width: 200px;
+
+            margin-right: 755px;
 
             font-size: 14px;
             line-height: 1.4;
