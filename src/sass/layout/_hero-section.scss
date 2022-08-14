@@ -333,9 +333,10 @@
 
             padding: 5px;
 
-            // Блок вказівник
             color: var(--text-color-primary);
             background: var(--decorative-color);
+
+            // Блок вказівник
             border: 4px solid transparent;
             box-shadow:
                 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -345,30 +346,38 @@
             
             &:after,
             &:before {
+                content: "";
+
+                position: absolute;
                 top: 105%;
                 left: 50%;
-                border: 2px solid transparent;
-                content: "";
+
                 height: 0;
                 width: 0;
-                position: absolute;
+
+                border: 2px solid transparent;
+                
                 pointer-events: none;
             }
 
 
             &:before {
+                margin-left: -75px;
+
+                border-width: 10px;
                 border-color: transparent;
                 border-top-color: rgba(0, 0, 0, 0.3);
-                border-width: 12px;
-                margin-left: -75px;
+                
+
             }
 
 
             &:after {
+                margin-left: -73px;
+
+                border-width: 8px;
                 border-color: transparent;
                 border-top-color: var(--decorative-color);
-                border-width: 9px;
-                margin-left: -72px;
             }
         }
     }
@@ -531,12 +540,18 @@
                 top: 103%;
             }
 
+
             &:before {
                 margin-left: -147px;
+
+                border-width: 12px;
             }
+
 
             &::after {
                 margin-left: -144px;
+
+                border-width: 9px;
             }
         }
     }
