@@ -35,12 +35,13 @@
             background-image:
                 url("../images/hero/big-ice-cream-mobile-@2x.png"),
                 radial-gradient(circle at center,
-                    var(--decorative-color) 56.5%,
-                    transparent 56.5%);
+                                var(--decorative-color) 56.5%,
+                                transparent 56.5%);
         }
 
 
-        animation: hero-images-animate 1000ms linear;
+        // Анімація для головної картинки hero
+        animation: hero-main-image-animation 700ms linear;
     }
 
 
@@ -138,14 +139,14 @@
                 url("../images/hero/girl-tastes-ice-cream-tablet.png"),
                 url("../images/hero/big-ice-cream-tablet.png"),
                 radial-gradient(circle at center,
-                    var(--decorative-color) 62.5%,
-                    transparent 62.5%);
+                                var(--decorative-color) 62.5%,
+                                transparent 62.5%);
 
             background-size: 152px, 190px, 143px, 335px;
             background-position: top 246px left 32px,
-                bottom 1px right 32px,
-                top 80px right 303px,
-                top 8px right 185px;
+                                bottom 1px right 32px,
+                                top 80px right 303px,
+                                top 8px right 185px;
 
 
 
@@ -157,8 +158,8 @@
                     url("../images/hero/girl-tastes-ice-cream-tablet-@2x.png"),
                     url("../images/hero/big-ice-cream-tablet-@2x.png"),
                     radial-gradient(circle at center,
-                        var(--decorative-color) 62.5%,
-                        transparent 62.5%);
+                                    var(--decorative-color) 62.5%,
+                                    transparent 62.5%);
             }
         }
 
@@ -336,9 +337,9 @@
             border: 4px solid transparent;
             border-radius: 15px;
             box-shadow:
-                0px 1px 3px rgba(0, 0, 0, 0.12),
-                0px 1px 1px rgba(0, 0, 0, 0.14),
-                0px 2px 1px rgba(0, 0, 0, 0.2);
+                    0px 1px 3px rgba(0, 0, 0, 0.12),
+                    0px 1px 1px rgba(0, 0, 0, 0.14),
+                    0px 2px 1px rgba(0, 0, 0, 0.2);
 
 
 
@@ -357,7 +358,7 @@
 
 
             &:before {
-                top: 105%;
+                top: 104%;
 
                 margin-left: -60px;
 
@@ -367,7 +368,7 @@
 
 
             &:after {
-                top: 103%;
+                top: 102%;
 
                 margin-left: -59px;
 
@@ -431,14 +432,14 @@
                 url("../images/hero/girl-tastes-ice-cream-desktop.png"),
                 url("../images/hero/big-ice-cream-desktop.png"),
                 radial-gradient(circle at center,
-                    var(--decorative-color) 62.5%,
-                    transparent 62.5%);
+                                var(--decorative-color) 62.5%,
+                                transparent 62.5%);
 
             background-size: 213px, 304px, 236px, 534px;
             background-position: top 388px left 16px,
-                bottom 1px right 16px,
-                top 108px right 328px,
-                top -10px right 149px;
+                                bottom 1px right 16px,
+                                top 108px right 328px,
+                                top -10px right 149px;
 
 
 
@@ -450,8 +451,8 @@
                     url("../images/hero/girl-tastes-ice-cream-desktop-@2x.png"),
                     url("../images/hero/big-ice-cream-desktop-@2x.png"),
                     radial-gradient(circle at center,
-                        var(--decorative-color) 62.5%,
-                        transparent 62.5%);
+                                    var(--decorative-color) 62.5%,
+                                    transparent 62.5%);
             }
         }
 
@@ -585,43 +586,34 @@
 
 
 // Анімація для головної картинки hero
-
-@keyframes hero-images-animate {
-    0% {
-        background-size: 0px, 346px;
+@keyframes hero-main-image-animation {
+    from {
+        background-position: top 502px left 117px,
+                            top 2px left 35px;
     }
 
-    33% {
-        background-size: 114px, 346px;
-    }
-
-    66% {
-        background-size: 228px, 346px;
-    }
-
-    100% {
-        background-size: 171px, 346px;
+    to {
+        background-position: top 92px left 117px,
+                            top 2px left 35px;
     }
 }
 
 
 
 @media screen and (min-width: 768px) {
-    @keyframes hero-images-animate {
-        0% {
-            background-size: 152px, 190px, 0px, 335px;
+    @keyframes hero-main-image-animation {
+        from {
+            background-position: top 246px left 32px,
+                                 bottom 1px right 32px,
+                                 top 416px right 303px,
+                                 top 8px right 185px;
         }
 
-        33% {
-            background-size: 152px, 190px, 95px, 335px;
-        }
-
-        66% {
-            background-size: 152px, 190px, 191px, 335px;
-        }
-
-        100% {
-            background-size: 152px, 190px, 143px, 335px;
+        to {
+            background-position: top 246px left 32px,
+                                 bottom 1px right 32px,
+                                 top 80px right 303px,
+                                 top 8px right 185px;
         }
     }
 }
@@ -629,21 +621,19 @@
 
 
 @media screen and (min-width: 1200px) {
-    @keyframes hero-images-animate {
-        0% {
-            background-size: 213px, 304px, 0px, 534px;
+    @keyframes hero-main-image-animation {
+        from {
+            background-position: top 388px left 16px,
+                                bottom 1px right 16px,
+                                top 664px right 328px,
+                                top -10px right 149px;
         }
 
-        33% {
-            background-size: 213px, 304px, 157px, 534px;
-        }
-
-        66% {
-            background-size: 213px, 304px, 315px, 534px;
-        }
-
-        100% {
-            background-size: 213px, 304px, 236px, 534px;
+        to {
+            background-position: top 388px left 16px,
+                                bottom 1px right 16px,
+                                top 108px right 328px,
+                                top -10px right 149px;
         }
     }
 }
