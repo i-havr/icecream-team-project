@@ -31,12 +31,19 @@
     <meta name="theme-color" content="#ffffff" />
 
     <!-- Slick-slider  -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
 
     <title>IceCream</title>
     <link rel="stylesheet" href="./sass/index.scss" />
-
   </head>
   <body>
     <include src="./partials/header-section.html"></include>
@@ -51,13 +58,33 @@
 
     <include src="./partials/contacts-map-modal.html"></include>
     <include src="./partials/contacts-franchise-modal.html"></include>
-    
+
     <!-- Jquery -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
     <!-- Slick-slider -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <!--Button-up-skroll -->
+    <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script>
+      addBackToTop({
+        backgroundColor: '#d41443',
+        innerHTML:
+          '<svg viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>',
+        textColor: '#fff',
+      });
+    </script>
+
     <script type="module" src="./index.js"></script>
   </body>
 </html>
