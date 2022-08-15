@@ -6,6 +6,7 @@
     height: 100%;
     background-color: rgba(255, 245, 246, 0.6);
     opacity: 1;
+    transition: opacity 250ms var(--timing-function),visibility 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden {
