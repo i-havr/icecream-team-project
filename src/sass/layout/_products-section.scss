@@ -1,5 +1,5 @@
 .products {
-  padding-top: 120px;
+  padding-top: 60px;
   padding-bottom: 98px;
 
   &__subtitle {
@@ -43,6 +43,15 @@
     text-transform: uppercase;
     color: var(--text-color-secondary);
     // color: var(--text-color-secondary);
+
+    &::after {
+      content: "...";
+    display: block;
+    font-size: 25px;
+    letter-spacing: 3px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    }
   }
 
   &__description {
@@ -86,6 +95,11 @@
     }
   }
 }
+
+.products-list:nth-child(1) {
+  margin-left: 0;
+}
+
 
 .products-list__item {
   display: flex;
@@ -166,15 +180,11 @@
   }
   .products-list {
     &__title {
-      padding-bottom: 30px;
-
       font-size: 20px;
       line-height: 1.15;
     }
 
     &__description {
-      margin-top: 30px;
-
       font-size: 14px;
       line-height: 1.52;
     }
@@ -196,8 +206,7 @@
 
 @media screen and (min-width: 768px) {
   .products {
-    padding-top: 122px;
-    padding-bottom: 112px;
+   
     &__subtitle {
       font-size: 26px;
       line-height: 1.46;
@@ -270,7 +279,7 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
   .products {
    
     &__subtitle {
@@ -290,8 +299,8 @@
     }
 
     &__description {
-      font-weight: 700;
       font-size: 16px;
+      line-height: 1.76;
       letter-spacing: 0.04em;
     }
 
@@ -319,7 +328,7 @@
     }
     &.ice-cream {
       &::before {
-        background-image: url(../images/products/ice-cream-desktop-@2x.png);
+        background-image: url(../images/products/ice-cream-desktop.png);
 
         @media screen and (min-device-pixel-ratio: 2),
           screen and (min-resolution: 192dpi),
