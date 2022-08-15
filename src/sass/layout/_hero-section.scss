@@ -1,0 +1,543 @@
+.hero {
+
+// Styles for mobile
+
+    position: relative;
+
+    height: 502px;
+
+    background-color: var(--background-color-other);
+
+
+    &__overlay {
+        height: 100%;
+        max-width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 194px;
+        padding-bottom: 158px;
+
+        background-image:
+            url("../images/hero/big-ice-cream-mobile.png"),
+            radial-gradient(circle at center,
+                            var(--decorative-color) 56.5%,
+                            transparent 56.5%);
+    
+        background-size: 171px, 346px;
+        background-repeat: no-repeat;
+        background-position: top 92px left 117px,
+                            top 2px left 35px;
+
+
+
+        @media screen and (min-device-pixel-ratio: 2),
+                screen and (min-resolution: 192dpi),
+                screen and (min-resolution: 2dppx) {
+            background-image:
+                url("../images/hero/big-ice-cream-mobile-@2x.png"),
+                radial-gradient(circle at center,
+                                var(--decorative-color) 56.5%,
+                                transparent 56.5%);
+        }
+    }
+
+
+
+    @media screen and (max-width: 767px) {
+        &__container {
+            margin-left: initial;
+            margin-right: initial;
+        }
+
+
+
+        &__wrapper {
+            max-width: 218px;
+        }
+    }
+
+
+
+    &__container {
+        text-align: right;
+    }
+
+
+
+    &__title {
+        margin-bottom: 20px;
+
+        text-align: left;
+        font-size: 26px;
+        letter-spacing: 0.04em;
+        color: var(--text-color-secondary);
+    }
+
+
+
+    &__title--red {
+        font-size: 48px;
+        line-height: .96;
+        letter-spacing: 0.01em;
+        color: var(--text-color-titles);
+    }
+
+
+
+    &__btns {
+        @include centeredFlex (flex, left, center);
+    }
+
+
+
+    &__btn-item:not(:last-child) {
+        margin-right: 8px;
+    }
+
+
+
+    &__btn {
+        padding: 7px 14px;
+        font-size: 8px;
+        line-height: 1.25;
+
+        cursor: pointer;
+    }
+
+
+
+    &__outlet {
+        display: none;
+    }
+
+
+
+    &__descr {
+        display: none;
+    }
+
+
+
+    // Styles for tablets
+
+    @media screen and (min-width: 768px) {
+
+        height: 416px;
+
+
+
+        &__overlay {
+            max-width: 768px;
+            padding-top: 102px;
+            padding-bottom: 32px;
+
+            background-image:
+                url("../images/hero/cup-of-milk-tablet.png"),
+                url("../images/hero/girl-tastes-ice-cream-tablet.png"),
+                url("../images/hero/big-ice-cream-tablet.png"),
+                radial-gradient(circle at center,
+                                var(--decorative-color) 62.5%,
+                                transparent 62.5%);
+
+            background-size: 152px, 190px, 143px, 335px;
+            background-position: top 246px left 32px,
+                                bottom 1px right 32px,
+                                top 80px right 303px,
+                                top 8px right 185px;
+        
+        
+        
+            @media screen and (min-device-pixel-ratio: 2),
+                    screen and (min-resolution: 192dpi),
+                    screen and (min-resolution: 2dppx) {
+                background-image:
+                    url("../images/hero/cup-of-milk-tablet-@2x.png"),
+                    url("../images/hero/girl-tastes-ice-cream-tablet-@2x.png"),
+                    url("../images/hero/big-ice-cream-tablet-@2x.png"),
+                    radial-gradient(circle at center,
+                                    var(--decorative-color) 62.5%,
+                                    transparent 62.5%);
+            }
+        }
+
+
+
+        &__wrapper {
+            @include centeredFlex (flex, space-between, baseline);
+        }
+
+
+
+        &__title {
+            max-width: 162px;
+
+            font-size: 22px;
+            line-height: 1.14;
+        }
+
+
+
+        &__title--red {
+            font-size: 34px;
+            line-height: .91;
+            letter-spacing: 0.04em;
+        }
+
+
+
+        &__btns {
+            margin-bottom: 60px;
+        }
+
+
+
+        &__outlet {
+            display: inline-block;
+
+            margin-right: 6px;
+        }
+
+
+
+        &__outlet-item {
+            position: relative;
+            z-index: 1;
+
+            text-align: right;
+            font-size: 28px;
+            line-height: 1.14;
+        }
+
+
+
+        &__outlet-item:not(:last-child) {
+            margin-bottom: 27px;
+        }
+
+
+
+        &__outlet-item::before {
+            content: "";
+    
+            position: absolute;
+            top: -4px;
+            right: -6px;
+            z-index: -1;
+
+            width: 16px;
+            height: 16px;
+
+            border-radius: 50%;
+
+            background-color: var(--text-color-secondary);
+        }
+        
+
+
+        &__outlet-deskr {
+            position: absolute;
+            bottom: -9px;
+            right: 0;
+
+            min-width: 46px;
+
+            font-family: 'DM Sans';
+            font-size: 8px;
+            line-height: 1.25;
+            letter-spacing: 0.04em;
+            text-transform: lowercase;
+            color: var(--text-color-secondary);
+        }
+        
+        
+
+        &__descr {
+            position: relative;
+
+            display: inline-block;
+
+            margin-right: 438px;
+
+            width: 114px;
+            height: 48px;
+
+            font-size: 8px;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: left;
+            color: var(--text-color-secondary);
+
+            pointer-events: none;
+        }
+
+
+        // Кнопка під описом
+        &__descr::after {
+            content: "";
+
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+
+            width: 18px;
+            height: 18px;
+
+            border-radius: 50%;
+
+            background-color: var(--background-color-primary);
+            background-image: url(../images/svg-images/arrow-right.svg);
+            background-size: 7px;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+
+            pointer-events: auto;
+            cursor: pointer;
+
+            transition: background-color 250ms var(--timing-function);
+        }
+
+
+
+        &__descr-expanded {
+            display: none;
+        }
+
+
+
+        // Ховер на кнопкпу
+        &__descr:hover::after,
+        &__descr:focus::after {
+            background-color: #ecebeb;
+        }
+
+
+        
+        // При ховері на кнопкпу не показується стандартний опис
+        &__descr:hover &__descr-default,
+        &__descr:focus &__descr-default {
+             display: none;
+        }
+
+
+
+        // При ховері на кнопкпу показується новий опис
+        &__descr:hover &__descr-expanded,
+        &__descr:focus &__descr-expanded {
+            
+            display: inline-block;
+            width: 150px;
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            padding: 5px;
+
+            // Блок вказівник
+            color: var(--text-color-primary);
+            background: var(--decorative-color);
+            border: 4px solid transparent;
+            box-shadow:
+                0px 1px 3px rgba(0, 0, 0, 0.12),
+                0px 1px 1px rgba(0, 0, 0, 0.14),
+                0px 2px 1px rgba(0, 0, 0, 0.2);
+
+            
+            &:after,
+            &:before {
+                top: 105%;
+                left: 50%;
+                border: 2px solid transparent;
+                content: "";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+            }
+
+
+            &:before {
+                border-color: transparent;
+                border-top-color: rgba(0, 0, 0, 0.3);
+                border-width: 12px;
+                margin-left: -75px;
+            }
+
+
+            &:after {
+                border-color: transparent;
+                border-top-color: var(--decorative-color);
+                border-width: 9px;
+                margin-left: -72px;
+            }
+        }
+    }
+
+
+
+    // Styles for desktop
+
+    @media screen and (min-width: 1200px) {
+
+        height: 664px;
+
+        &__overlay {
+            max-width: 1200px;
+            padding-top: 147px;
+            padding-bottom: 84px;
+        
+            background-image:
+                url("../images/hero/cup-of-milk-desktop.png"),
+                url("../images/hero/girl-tastes-ice-cream-desktop.png"),
+                url("../images/hero/big-ice-cream-desktop.png"),
+                radial-gradient(circle at center,
+                                var(--decorative-color) 62.5%,
+                                transparent 62.5%);
+        
+            background-size: 213px, 304px, 236px, 534px;
+            background-position: top 388px left 16px,
+                                bottom 1px right 16px,
+                                top 108px right 328px,
+                                top -10px right 149px;
+
+
+
+            @media screen and (min-device-pixel-ratio: 2),
+                    screen and (min-resolution: 192dpi),
+                    screen and (min-resolution: 2dppx) {
+                background-image:
+                    url("../images/hero/cup-of-milk-desktop-@2x.png"),
+                    url("../images/hero/girl-tastes-ice-cream-desktop-@2x.png"),
+                    url("../images/hero/big-ice-cream-desktop-@2x.png"),
+                    radial-gradient(circle at center,
+                                    var(--decorative-color) 62.5%,
+                                    transparent 62.5%);
+            }
+        }
+
+
+
+        &__wrapper {
+            align-items: center;
+        }
+
+
+
+        &__title {
+            max-width: 277px;
+            margin-bottom: 24px;
+    
+            font-size: 38px;
+            line-height: 1.16;
+        }
+        
+        
+        
+        &__title--red {
+            font-size: 58px;
+            line-height: .90;
+        }
+
+
+
+        &__btns {
+            margin-bottom: 108px;
+        }
+
+
+
+        &__btn {
+            padding: 11px 23px;
+            font-size: 14px;
+            line-height: 1.29;
+        }
+
+
+
+        &__outlet {
+            margin-right: 15px;
+        }
+
+
+
+        &__outlet-item {
+            font-size: 46px;
+            line-height: 1.15;
+        }
+
+
+
+        &__outlet-item:not(:last-child) {
+            margin-bottom: 38px;
+        }
+
+
+
+        &__outlet-item::before {
+            top: -5px;
+            right: -15px;
+
+            width: 30px;
+            height: 30px;
+        }
+
+
+
+        &__outlet-deskr {
+            position: absolute;
+            bottom: -18px;
+            right: 0;
+
+            min-width: 80px;
+
+            font-size: 14px;
+            line-height: 1.29;
+            letter-spacing: 0.01em;
+        }
+
+
+
+        &__descr {
+            width: 200px;
+            height: 78px;
+
+            margin-right: 755px;
+
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+
+        // Кнопка під описом
+        &__descr::after {
+            bottom: -36px;
+
+            width: 26px;
+            height: 26px;
+
+            background-size: 11px;
+        }
+
+
+
+        &__descr:hover &__descr-expanded,
+        &__descr:focus &__descr-expanded {
+            
+            width: 300px;
+
+            // Блок вказівник
+            &::after,
+            &::before {
+                top: 103%;
+            }
+
+            &:before {
+                margin-left: -147px;
+            }
+
+            &::after {
+                margin-left: -144px;
+            }
+        }
+    }
+}
