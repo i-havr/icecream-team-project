@@ -1,5 +1,5 @@
 <section class="about section" id="about">
-    <div class="container">
+    <div class="container position">
         <p class="about__title-lable label">tradition and love</p>
         <h2 class="about__title title">how it’s made?</h2>
         <div class="about__card">
@@ -16,8 +16,7 @@
                     <source  srcset="/src/images/about/cow-and-cup-of-milk-mobile.png,
                                      /src/images/about/cow-and-cup-of-milk-mobile-@2x.png"
                               media="(min-width: 480px)"/>
-       -->
-                    <img class="" 
+                    <img  
                           src="/src/images/about/cow-and-cup-of-milk-desktop.png"
                           alt="фото молоко" 
                           width="501"/>
@@ -39,16 +38,26 @@
                 </p>
 
                 <button type="button" class="about__button">Read more
-                    <svg class="about__right-icon" width="11px" height="11px">
-                        <use href="/src/images/svg-images/button-right.svg">
-
-                        </use>
-            
-                      </svg>
+                    <svg class="about__button-icon" aria-hidden="true">
+                        <use href="../src/images/svg-images/svg-sprite.svg#icon-arrow-button"></use>
                     </svg>
+                </button>
 
                 </button>
             </div>
+            <picture class="about__milk">
+                 <source  srcset="/src/images/about/cow-and-cup-of-milk-desktop.png,
+                                  /src/images/about/cow-and-cup-of-milk-desktop-@2x.png "
+                                   media="(min-width: 1200px)"/>
+                <source srcset="/src/images/about/milk-splashes-mobile.png,
+                                /src/images/about/milk-splashes-mobile-@2x.png"
+                                 media="(min-width: 320px)"/>
+                <img class="" 
+                          src="/src/images/about/milk-splashes-desktop-@2x.png"
+                          
+                          alt="молоко" 
+                          width="1180px."/>
+            </picture>
 
         </div>
     </div>

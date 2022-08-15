@@ -1,6 +1,12 @@
 .about{
-    background-color: var(--background-color-secondary);
   
+    background-color: var(--background-color-secondary);
+   
+  
+  
+}
+.position{
+ 
 }
 .about__title-lable{
     margin-bottom: 15px;
@@ -40,7 +46,21 @@
         @media screen and (min-width: 768px) {
         
             display: flex;
+
         }
+        @media screen and (min-width: 1200px) {
+          background-position:50% 50%;
+          background-repeat: no-repeat;
+          background-size:cover; 
+        
+
+          background-image: url(/src/images/about/milk-splashes-desktop.png);
+    
+               @media (min-device-pixel-ratio: 2),
+               (min-resolution: 192dpi),
+               (min-resolution: 2dppx){
+                background-image: url(/src/images/about/milk-splashes-desktop-@2x.png);}
+      }
 }
 
 
@@ -57,9 +77,16 @@
 
 
 .about__button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+   
     width: 176px;
     height: 44px;
     border: none;
+
+   
     border-radius: 22px;
     background-color: var(--text-color-secondary);
     color: var(--text-color-titles);
@@ -79,8 +106,15 @@
       }
   }
 }
+.about__button-icon{
+  width: 10.5px;
+  height: 16px;
+  margin-left: 13.5px;
+  fill: currentColor;
+}
 
 .about__card-description{
+  position: relative;
     width: 220px;
     margin-left: auto;
     margin-right: 60px;
@@ -96,6 +130,7 @@
         margin-left: auto;
         
       }
+      
 }
 
 .about__card-description-current{
@@ -123,7 +158,7 @@
 }
 
 .about__card-description-text{
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
     font-family: 'DM Sans';
     font-style: normal;
@@ -149,4 +184,17 @@
 
 
 }
+.about__milk{
+  position: absolute;
+  transform: translateY(-215%);
+ 
+  width: 280px;
+  @media screen and (min-width: 768px) {
+      
+  display: none;
+ }
+ 
+
+}
+
 
