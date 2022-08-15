@@ -14,5 +14,28 @@
         padding: 30px 50px 17px 50px;
         font-size: 12px;
         line-height: 2.58;
+        background-color: var(--background-color-reviews);
     }
+
+    &__name {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.86;
+    }
+}
+
+.customer__review::before {
+    display: block;
+    content: "";
+    width: 54px;
+    height: 40px;
+    background-image: url(../images/svg-images/customer-quotation-marks.svg);
+}
+
+.customer__review::after {
+    display: block;
+    content: "";
+    width: 32px;
+    height: 4px;
+    background-image: url(../images/svg-images/customer-quotation-marks.svg);
 }
