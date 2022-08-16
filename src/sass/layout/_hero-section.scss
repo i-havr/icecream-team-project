@@ -1,6 +1,6 @@
 .hero {
 
-// Styles for mobile
+    // Styles for mobile
 
     position: relative;
 
@@ -20,25 +20,28 @@
         background-image:
             url("../images/hero/big-ice-cream-mobile.png"),
             radial-gradient(circle at center,
-                            var(--decorative-color) 56.5%,
-                            transparent 56.5%);
-    
+                var(--decorative-color) 56.5%,
+                transparent 56.5%);
+
         background-size: 171px, 346px;
         background-repeat: no-repeat;
         background-position: top 92px left 117px,
-                            top 2px left 35px;
-
-
+                             top 2px left 35px;
+                             
 
         @media screen and (min-device-pixel-ratio: 2),
-                screen and (min-resolution: 192dpi),
-                screen and (min-resolution: 2dppx) {
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
             background-image:
                 url("../images/hero/big-ice-cream-mobile-@2x.png"),
                 radial-gradient(circle at center,
                                 var(--decorative-color) 56.5%,
                                 transparent 56.5%);
         }
+
+
+        // Анімація для головної картинки hero
+        animation: hero-main-image-animation 700ms linear;
     }
 
 
@@ -144,12 +147,12 @@
                                 bottom 1px right 32px,
                                 top 80px right 303px,
                                 top 8px right 185px;
-        
-        
-        
+
+
+
             @media screen and (min-device-pixel-ratio: 2),
-                    screen and (min-resolution: 192dpi),
-                    screen and (min-resolution: 2dppx) {
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
                 background-image:
                     url("../images/hero/cup-of-milk-tablet-@2x.png"),
                     url("../images/hero/girl-tastes-ice-cream-tablet-@2x.png"),
@@ -218,7 +221,7 @@
 
         &__outlet-item::before {
             content: "";
-    
+
             position: absolute;
             top: -4px;
             right: -6px;
@@ -231,7 +234,7 @@
 
             background-color: var(--text-color-secondary);
         }
-        
+
 
 
         &__outlet-deskr {
@@ -248,8 +251,8 @@
             text-transform: lowercase;
             color: var(--text-color-secondary);
         }
-        
-        
+
+
 
         &__descr {
             position: relative;
@@ -269,6 +272,7 @@
 
             pointer-events: none;
         }
+
 
 
         // Кнопка під описом
@@ -298,12 +302,6 @@
 
 
 
-        &__descr-expanded {
-            display: none;
-        }
-
-
-
         // Ховер на кнопкпу
         &__descr:hover::after,
         &__descr:focus::after {
@@ -311,11 +309,96 @@
         }
 
 
-        
+
+        &__descr-expanded {
+            opacity: 0;
+            visibility: hidden;
+
+            position: absolute;
+            bottom: 0;
+            left: -15px;
+
+            width: 150px;
+
+            padding: 5px;
+
+            color: var(--text-color-secondary);
+            background-color: var(--decorative-color);
+
+            transform-origin: bottom left;
+            transform: scale(0);
+
+            transition: opacity 250ms var(--timing-function),
+                        visibility 250ms var(--timing-function),
+                        transform 250ms var(--timing-function);
+
+
+            // Блок вказівник
+            border: 4px solid transparent;
+            border-radius: 15px;
+            box-shadow:
+                    0px 1px 3px rgba(0, 0, 0, 0.12),
+                    0px 1px 1px rgba(0, 0, 0, 0.14),
+                    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+
+
+            &:after,
+            &:before {
+                content: "";
+
+                position: absolute;
+                left: 50%;
+
+                height: 0;
+                width: 0;
+
+                border: 2px solid transparent;
+            }
+
+
+            &:before {
+                top: 104%;
+
+                margin-left: -60px;
+
+                border-width: 10px;
+                border-top-color: rgba(0, 0, 0, 0.3);
+            }
+
+
+            &:after {
+                top: 102%;
+
+                margin-left: -59px;
+
+                border-width: 9px;
+                border-top-color: var(--decorative-color);
+            }
+        }
+
+
+
+        &__descr-default {
+            opacity: 1;
+            visibility: visible;
+            
+            transform-origin: bottom left;
+            transform: scale(1);
+
+            transition: opacity 250ms var(--timing-function),
+                        visibility 250ms var(--timing-function),
+                        transform 250ms var(--timing-function);
+        }
+
+
+
         // При ховері на кнопкпу не показується стандартний опис
         &__descr:hover &__descr-default,
         &__descr:focus &__descr-default {
-             display: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0);
         }
 
 
@@ -323,53 +406,11 @@
         // При ховері на кнопкпу показується новий опис
         &__descr:hover &__descr-expanded,
         &__descr:focus &__descr-expanded {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
             
-            display: inline-block;
-            width: 150px;
-
-            position: absolute;
-            bottom: 0;
-            left: 0;
-
-            padding: 5px;
-
-            // Блок вказівник
-            color: var(--text-color-primary);
-            background: var(--decorative-color);
-            border: 4px solid transparent;
-            box-shadow:
-                0px 1px 3px rgba(0, 0, 0, 0.12),
-                0px 1px 1px rgba(0, 0, 0, 0.14),
-                0px 2px 1px rgba(0, 0, 0, 0.2);
-
-            
-            &:after,
-            &:before {
-                top: 105%;
-                left: 50%;
-                border: 2px solid transparent;
-                content: "";
-                height: 0;
-                width: 0;
-                position: absolute;
-                pointer-events: none;
-            }
-
-
-            &:before {
-                border-color: transparent;
-                border-top-color: rgba(0, 0, 0, 0.3);
-                border-width: 12px;
-                margin-left: -75px;
-            }
-
-
-            &:after {
-                border-color: transparent;
-                border-top-color: var(--decorative-color);
-                border-width: 9px;
-                margin-left: -72px;
-            }
+            pointer-events: auto;
         }
     }
 
@@ -385,7 +426,7 @@
             max-width: 1200px;
             padding-top: 147px;
             padding-bottom: 84px;
-        
+
             background-image:
                 url("../images/hero/cup-of-milk-desktop.png"),
                 url("../images/hero/girl-tastes-ice-cream-desktop.png"),
@@ -393,7 +434,7 @@
                 radial-gradient(circle at center,
                                 var(--decorative-color) 62.5%,
                                 transparent 62.5%);
-        
+
             background-size: 213px, 304px, 236px, 534px;
             background-position: top 388px left 16px,
                                 bottom 1px right 16px,
@@ -403,8 +444,8 @@
 
 
             @media screen and (min-device-pixel-ratio: 2),
-                    screen and (min-resolution: 192dpi),
-                    screen and (min-resolution: 2dppx) {
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
                 background-image:
                     url("../images/hero/cup-of-milk-desktop-@2x.png"),
                     url("../images/hero/girl-tastes-ice-cream-desktop-@2x.png"),
@@ -426,13 +467,13 @@
         &__title {
             max-width: 277px;
             margin-bottom: 24px;
-    
+
             font-size: 38px;
             line-height: 1.16;
         }
-        
-        
-        
+
+
+
         &__title--red {
             font-size: 58px;
             line-height: .90;
@@ -508,6 +549,7 @@
         }
 
 
+
         // Кнопка під описом
         &__descr::after {
             bottom: -36px;
@@ -520,24 +562,78 @@
 
 
 
-        &__descr:hover &__descr-expanded,
-        &__descr:focus &__descr-expanded {
-            
+        &__descr-expanded {
             width: 300px;
 
+
             // Блок вказівник
-            &::after,
-            &::before {
-                top: 103%;
-            }
-
             &:before {
-                margin-left: -147px;
+                margin-left: -131px;
+                top: 104%;
+                border-width: 11px;
             }
-
+        
+        
             &::after {
-                margin-left: -144px;
+                margin-left: -132px;
+                top: 101%;
+                border-width: 12px;
             }
+        }
+    }
+}
+
+
+
+// Анімація для головної картинки hero
+@keyframes hero-main-image-animation {
+    from {
+        background-position: top 502px left 117px,
+                            top 2px left 35px;
+    }
+
+    to {
+        background-position: top 92px left 117px,
+                            top 2px left 35px;
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    @keyframes hero-main-image-animation {
+        from {
+            background-position: top 246px left 32px,
+                                 bottom 1px right 32px,
+                                 top 416px right 303px,
+                                 top 8px right 185px;
+        }
+
+        to {
+            background-position: top 246px left 32px,
+                                 bottom 1px right 32px,
+                                 top 80px right 303px,
+                                 top 8px right 185px;
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 1200px) {
+    @keyframes hero-main-image-animation {
+        from {
+            background-position: top 388px left 16px,
+                                bottom 1px right 16px,
+                                top 664px right 328px,
+                                top -10px right 149px;
+        }
+
+        to {
+            background-position: top 388px left 16px,
+                                bottom 1px right 16px,
+                                top 108px right 328px,
+                                top -10px right 149px;
         }
     }
 }
