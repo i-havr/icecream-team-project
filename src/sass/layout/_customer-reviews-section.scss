@@ -1,10 +1,16 @@
 .customer-reviews {
-    padding-bottom: 0;
+    @media screen and (max-width: 767px) {
+        padding-bottom: 0;
+    }
+
+    @media screen and (max-width: 1199px) {
+        padding-bottom: 20px;
+    }
 }
 
 .customer {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 
     &__img {
         margin-left: auto;
@@ -85,4 +91,5 @@
 
 .slick-dots li.slick-active button:before {
     opacity: 0;
+    transition: opacity 250ms var(--timing-function);
 }
