@@ -5,3 +5,4 @@ import './js/contacts-map-modal';
 import './js/contacts-franchise-modal';
 import './js/mobile-menu';
 import './js/modal';
+import './js/modal2';

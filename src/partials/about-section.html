@@ -37,7 +37,7 @@
                     <br>Aliquam erat volutpat. Aenean accumsan.
                 </p>
 
-                <button type="button" class="about__button">Read more
+                <button type="button" class="about__button js-open-modal" data-modal-open>Read more
                     <svg class="about__button-icon" aria-hidden="true">
                         <use href="../src/images/svg-images/svg-sprite.svg#icon-arrow-button"></use>
                     </svg>
@@ -53,4 +53,25 @@
 
         </div>
     </div>
+
+    <div class="overlay is-hidden" id="overlay-modal"  data-modal>
+        <div class="modal__about  ">
+            <button class="model-close-button" type="button" data-modal-close>
+                    <svg class="modal__cross"  width="25px" height="25px">
+                        <use href="../src/images/svg-images/svg-sprite.svg#icon-close-button"></use>
+                    </svg>
+            </button>
+
+                <h3 class="modal__title "> SUPER</h3>
+            
+                <p >MILK 10%</p>
+                <p >MILK 15%</p>
+                <p >MILK 25%</p>
+                <p >MILK 35%</p>
+        </div>
+
+
+
+    </div>
+   
 </section>

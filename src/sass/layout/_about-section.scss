@@ -3,7 +3,7 @@
   padding-bottom: 0;
 
   @media screen and (min-width: 1200px) {
-    background-position: 50% 80%;
+    background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(/src/images/about/milk-splashes-desktop.png);
@@ -107,11 +107,12 @@
 
   &:hover,
   &:focus {
-    @media screen and (min-width: 1200px) {
+   
       background-color: #ecebeb;
     }
   }
-}
+
+
 .about__button-icon {
   width: 10.5px;
   height: 16px;
