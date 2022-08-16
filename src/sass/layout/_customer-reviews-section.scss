@@ -1,13 +1,8 @@
 .customer-reviews {
-    @media screen and (max-width: 767px) {
-        padding-bottom: 0;
-    }
-
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-        padding-bottom: 20px;
+        padding-bottom: 80px;
     }
 }
-
 
 @media screen and (min-width: 768px) {
     .customer-reviews.section .container {
