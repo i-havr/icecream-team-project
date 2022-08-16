@@ -1,11 +1,27 @@
 .about{
   
     background-color: var(--background-color-secondary);
+
+}
    
   
   
-}
+
 .position{
+  
+  
+  @media screen and (min-width: 1200px) {
+    
+    background-position:50% 100%;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-image: url(/src/images/about/milk-splashes-desktop.png);
+
+     @media (min-device-pixel-ratio: 2),
+     (min-resolution: 192dpi),
+     (min-resolution: 2dppx){
+      background-image: url(/src/images/about/milk-splashes-desktop-@2x.png);}
+}
  
 }
 .about__title-lable{
@@ -43,36 +59,31 @@
         }
 }
 .about__card{
+
         @media screen and (min-width: 768px) {
-        
-            display: flex;
-
-        }
-        @media screen and (min-width: 1200px) {
-          background-position:50% 50%;
-          background-repeat: no-repeat;
-          background-size:cover; 
-        
-
-          background-image: url(/src/images/about/milk-splashes-desktop.png);
-    
-               @media (min-device-pixel-ratio: 2),
-               (min-resolution: 192dpi),
-               (min-resolution: 2dppx){
-                background-image: url(/src/images/about/milk-splashes-desktop-@2x.png);}
-      }
-}
+            display: flex; 
+           }
+          }
 
 
 .about__card-image{
+  
     margin-bottom: 40px;
     @media screen and (min-width: 768px) {
-        margin-bottom: 0; 
-       
-    }
-    
-   
-   
+      width: 336px;
+      margin-bottom: 0;        
+     }
+
+    @media screen and (min-width: 768px) {
+      width: 501px;
+      margin-bottom: 20px;
+     
+             
+      }
+  }
+
+  .about__img-cow{
+    margin-bottom: 20px;
   }
 
 
@@ -100,7 +111,7 @@
    
   &:hover,
   &:focus {
-    background-color:#ecebeb;
+  
     @media screen and (min-width: 1200px) {
         margin-top: 40px;
       }
@@ -114,6 +125,7 @@
 }
 
 .about__card-description{
+
   position: relative;
     width: 220px;
     margin-left: auto;
@@ -126,8 +138,9 @@
       @media screen and (min-width: 1200px) {
         width: 463px;
         padding-top: 90px;
-        padding-bottom: 81px;
-        margin-left: auto;
+        margin-left: 99px;
+        
+       
         
       }
       
@@ -135,7 +148,8 @@
 
 .about__card-description-current{
 
-    margin-bottom: 30px;
+
+    margin-bottom: 20px;
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 500;
@@ -143,7 +157,7 @@
     line-height: 1.62;
     color: #000000;
     @media screen and (min-width: 768px) {
-      
+       width: 334px;
          font-size: 14px;
          line-height: 1.76;
       }
@@ -153,6 +167,8 @@
     @media screen and (min-width: 1200px) { 
         font-size: 16px;
         letter-spacing: 0.04em;
+        margin-right: 0;
+        width: 463px;
        
       }
 }
@@ -167,6 +183,7 @@
     line-height: 162%;
     color: #907E82;
     @media screen and (min-width: 768px) {
+      width: 334px;
       
         font-size: 14px;
         line-height: 1.76;
@@ -174,6 +191,7 @@
      }
 
     @media screen and (min-width: 1200px) { 
+        width: 463px;
         margin-bottom: 32px;
         font-size: 14px;
         line-height: 1.94;
