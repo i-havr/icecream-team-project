@@ -1,0 +1,218 @@
+.about{
+  
+    background-color: var(--background-color-secondary);
+
+}
+   
+  
+  
+
+.position{
+  
+  
+  @media screen and (min-width: 1200px) {
+    
+    background-position:50% 100%;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-image: url(/src/images/about/milk-splashes-desktop.png);
+
+     @media (min-device-pixel-ratio: 2),
+     (min-resolution: 192dpi),
+     (min-resolution: 2dppx){
+      background-image: url(/src/images/about/milk-splashes-desktop-@2x.png);}
+}
+ 
+}
+.about__title-lable{
+    margin-bottom: 15px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 16px;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 1.15;
+      }
+      @media screen and (min-width: 1200px) {
+        font-size: 30px;
+        line-height: 1.13;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+    
+
+
+
+}
+.about__title{
+    margin-bottom: 32px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 40px;
+            font-size: 48px;
+            line-height: 1.15;
+        }
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 60px;
+            font-size: 58px;
+            line-height: 1.14;
+            letter-spacing: 0.06em;
+        }
+}
+.about__card{
+
+        @media screen and (min-width: 768px) {
+            display: flex; 
+           }
+          }
+
+
+.about__card-image{
+  
+    margin-bottom: 40px;
+    @media screen and (min-width: 768px) {
+      width: 336px;
+      margin-bottom: 0;        
+     }
+
+    @media screen and (min-width: 768px) {
+      width: 501px;
+      margin-bottom: 20px;
+     
+             
+      }
+  }
+
+  .about__img-cow{
+    margin-bottom: 20px;
+  }
+
+
+.about__button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+   
+    width: 176px;
+    height: 44px;
+    border: none;
+
+   
+    border-radius: 22px;
+    background-color: var(--text-color-secondary);
+    color: var(--text-color-titles);
+    transition: background-color 250ms var(--timing-function);
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.3;
+   
+  &:hover,
+  &:focus {
+  
+    @media screen and (min-width: 1200px) {
+        margin-top: 40px;
+      }
+  }
+}
+.about__button-icon{
+  width: 10.5px;
+  height: 16px;
+  margin-left: 13.5px;
+  fill: currentColor;
+}
+
+.about__card-description{
+
+  position: relative;
+    width: 220px;
+    margin-left: auto;
+    margin-right: 60px;
+    @media screen and (min-width: 768px) {
+        width: 334px;
+        margin-left: 32px;
+        margin-right: auto;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 463px;
+        padding-top: 90px;
+        margin-left: 99px;
+        
+       
+        
+      }
+      
+}
+
+.about__card-description-current{
+
+
+    margin-bottom: 20px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
+    color: #000000;
+    @media screen and (min-width: 768px) {
+       width: 334px;
+         font-size: 14px;
+         line-height: 1.76;
+      }
+
+
+   
+    @media screen and (min-width: 1200px) { 
+        font-size: 16px;
+        letter-spacing: 0.04em;
+        margin-right: 0;
+        width: 463px;
+       
+      }
+}
+
+.about__card-description-text{
+    margin-bottom: 20px;
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 162%;
+    color: #907E82;
+    @media screen and (min-width: 768px) {
+      width: 334px;
+      
+        font-size: 14px;
+        line-height: 1.76;
+        letter-spacing: 0.04em;
+     }
+
+    @media screen and (min-width: 1200px) { 
+        width: 463px;
+        margin-bottom: 32px;
+        font-size: 14px;
+        line-height: 1.94;
+        letter-spacing: 0.04em;
+
+      }
+   
+
+
+}
+.about__milk{
+  position: absolute;
+  transform: translateY(-215%);
+ 
+  width: 280px;
+  @media screen and (min-width: 768px) {
+      
+  display: none;
+ }
+ 
+
+}
+
+
