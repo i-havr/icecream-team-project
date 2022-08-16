@@ -31,6 +31,7 @@
         font-weight: 700;
         font-size: 16px;
         line-height: 1.31;
+        cursor: pointer;
     }
 
     &__button--in-menu {
@@ -70,10 +71,26 @@
     background-color: transparent;
     cursor: pointer;
 
+    &__open {
+        stroke: var(--text-color-titles);
+
+        transition: stroke 250ms var(--timing-function);
+    }
+
     &__close {
         position: absolute;
         top: 20px;
         right: 20px;
+        stroke: var(--text-color-secondary);
+
+        transition: stroke 250ms var(--timing-function);
+    }
+
+    &__open:hover,
+    &__open:focus,
+    &__close:hover,
+    &__close:focus {
+        stroke: var(--accent-color-mobile-menu-button);
     }
 
     &__icon-open {
@@ -136,7 +153,7 @@
         top: 0;
         z-index: 6;
         width: 250px;
-        height: 100vh;
+        height: 100%;
         padding: 60px 20px;
 
         overflow-y: scroll;
